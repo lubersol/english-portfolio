@@ -30,6 +30,10 @@ defineProps({
 
 <style scoped>
 .home-hero__socials {
+  display: flex; 
+  flex-direction: column;
+  align-self: flex-start; 
+  width: 5.8rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

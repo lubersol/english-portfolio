@@ -5,9 +5,7 @@ import MenuColumn from '../components/MenuColumn.vue';
 
 <template>
   <div class="home-hero">
-    <div class="home-hero__social-menu">
-      <MenuColumn />
-    </div>
+    <MenuColumn />
     <h1 class="heading-primary">Hey, I'm Lucía Bermejo</h1>
     <div class="home-hero__info">
       <p class="text-primary">
@@ -28,8 +26,8 @@ import MenuColumn from '../components/MenuColumn.vue';
   width: 100%;
   margin: 0;
   color: #fff;
-  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac885…/c157c/assets/svg/common-bg.svg);
-  /* background-position: center; */
+  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+  background-position: center;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
@@ -47,10 +45,10 @@ import MenuColumn from '../components/MenuColumn.vue';
     margin: 3rem auto 0 auto;
     max-width: 80rem;
 }
-.home-hero__social-menu {
+/* .home-hero__social-menu {
   display: flex;
   align-self: flex-start;
-}
+} */
 .text-primary {
     color: #333;
     font-size: 2rem;

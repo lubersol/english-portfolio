@@ -33,9 +33,12 @@
 
 <style>
 .contact {
-  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac885…/c157c/assets/svg/common-bg.svg);
+  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
+}
+.sec-pad {
+  padding: 12rem 0
 }
 .main-container {
   max-width: 120rem;
