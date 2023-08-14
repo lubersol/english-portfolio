@@ -13,5 +13,11 @@ import TitleItem from '../components/TitleItem.vue'
 </template>
 
 <style>
-
+.projects__row-content {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start
+}
 </style>
