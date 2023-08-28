@@ -12,7 +12,7 @@
     </div>
     <!-- TODO:INCLUIR AQUÍ ENLACE A MI CV EN GOOGLE DRIVE (en inglés!!!)COMO EN EL OTRO PORTFOLIO -->
     <div class="home-hero__social">
-      <a href="https://drive.google.com/file/d/1R90FcVZ2RrA8ydEq9guHF7vDjfAd314-/view" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+      <a href="https://drive.google.com/file/d/1kBPe6RL3Vn-fe6zkrT69YsUX1lyXZwZV/view?usp=sharing" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
         <img src="https://d33wubrfki0l68.cloudfront.net/e978c8491d93813aa00b3dc80b9abfb0d64a9086/3c187/assets/svg/book-dark.svg" alt="RammCodes DEV.to Blog Profile" class="home-hero__social-icon">
       </a>
     </div>
