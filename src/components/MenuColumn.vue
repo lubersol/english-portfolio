@@ -10,7 +10,6 @@
         <img src="https://d33wubrfki0l68.cloudfront.net/38469cf88d038b6ba3322c9fcb93a8f7167df4b9/cb0b9/assets/svg/github-dark.svg" alt="RammCodes Github Profile" class="home-hero__social-icon">
       </a>
     </div>
-    <!-- TODO:INCLUIR AQUÍ ENLACE A MI CV EN GOOGLE DRIVE (en inglés!!!)COMO EN EL OTRO PORTFOLIO -->
     <div class="home-hero__social">
       <a href="https://drive.google.com/file/d/1kBPe6RL3Vn-fe6zkrT69YsUX1lyXZwZV/view?usp=sharing" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
         <img src="https://d33wubrfki0l68.cloudfront.net/e978c8491d93813aa00b3dc80b9abfb0d64a9086/3c187/assets/svg/book-dark.svg" alt="RammCodes DEV.to Blog Profile" class="home-hero__social-icon">

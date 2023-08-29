@@ -26,7 +26,9 @@ import MenuColumn from '../components/MenuColumn.vue';
   width: 100%;
   margin: 0;
   color: #fff;
-  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
+  /* background-image: url('/subtle-prism.svg'); */
+  background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url('/subtle-prism.svg');
+  /* background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(https://d33wubrfki0l68.cloudfront.net/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg); */
   background-position: center;
   height: 100vh;
   min-height: 80rem;
