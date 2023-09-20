@@ -15,18 +15,15 @@ import TitleItem from '../components/TitleItem.vue'
           <div class="about__content-details">
             <p class="about__content-details-para">
               I'm a <strong>Fullstack Web Developer</strong> building the
-              Front-end of Websites and Web Applications that leads to the
-              success of the overall product. Check out some of my work in the
+              Front-end of Websites and Web Applications at Affin Solutions company. 
+              Check out some of my personal work in the
               <strong>Projects</strong> section.
             </p>
             <p class="about__content-details-para">
-              I also like sharing content related to the stuff that I have
-              learned over the years in <strong>Web Development</strong> so it
-              can help other people of the Dev Community. Feel free to Connect
-              or Follow me on my
+              I also like sharing content related to <strong>Web Development</strong>. 
+              Feel free to Connect or Follow me on my
               <a rel="noreferrer" href="https://www.linkedin.com/in/luc%C3%ADa-bermejo/" target="_blank">Linkedin</a>
-              where I post useful content related to Web Development and
-              Programming
+              where I recommend interesting content related to Programming and Web Development.
             </p>
             <p class="about__content-details-para">
               I'm open to <strong>Job</strong> opportunities where I can
