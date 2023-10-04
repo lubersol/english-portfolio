@@ -67,36 +67,44 @@ import TitleItem from '../components/TitleItem.vue'
 .about {
   background: #fafafa;
 }
+.sec-pad {
+  padding:12rem 0;
+}
 .main-container {
   max-width: 120rem;
   margin: auto;
   width: 92%;
 }
-.heading-sec__main {
-  display: block;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-bottom: 3.5rem;
-  position: relative;
-  color: #111;
-}
-.heading-sec__sub {
-  display: block;
-  text-align: center;
-  color: #555;
-  font-size: 2rem;
-  font-weight: 500;
-  max-width: 80rem;
-  margin: auto;
-  line-height: 1.6;
-}
 .about__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
+}
+.skills {
+  display:flex;
+  flex-wrap:wrap;
+}
+.skills__skill {
+  padding:1rem 2rem;
+  margin-bottom:1.5rem;
+  margin-right:1.5rem;
+  font-size:1.6rem;
+  background:rgba(153,153,153,.2);
+  border-radius:5px;
+  font-weight:600;
+  color:#666;
+}
+.mouse{width:25px;height:40px;border:2px solid #333;border-radius:60px;position:relative;overflow:hidden}
+.mouse::before{content:'';width:5px;height:5px;position:absolute;top:7px;left:50%;transform:translateX(-50%);background-color:#333;border-radius:50%;opacity:1;animation:wheel 1.3s infinite;-webkit-animation:wheel 1.3s infinite}
+@keyframes wheel{
+  to{
+      opacity:0;top:27px;
+  }
+}
+@-webkit-keyframes wheel{
+  to{
+      opacity:0;top:27px;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .sec-pad {

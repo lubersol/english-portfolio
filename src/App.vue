@@ -1,18 +1,23 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import MenuRow from './components/MenuRow.vue';
-import LogoItem from './components/LogoItem.vue';
+import LogoItem from './components/LogoItem.vue'
+import NavItem from './components/NavItem.vue'
+import FooterItem from './components/FooterItem.vue'
+
 </script>
 
 <template>
   <header class="header">
     <div class="header__content">
       <LogoItem />
-      <MenuRow />
+      <NavItem />
     </div>
   </header>
-
   <RouterView />
+  <footer class="main-footer">
+    <FooterItem />
+  </footer>
+  
 </template>
 
 <style scoped>
@@ -28,5 +33,14 @@ import LogoItem from './components/LogoItem.vue';
   align-items: center;
   justify-content: space-between;
   padding: 1rem 5rem;
+}
+.main-footer{
+    background:#000;
+    color:#fff;
+}
+@media only screen and (max-width:56.25em) {
+    .header__content{
+        padding:0 2rem;
+    }
 }
 </style>

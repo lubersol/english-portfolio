@@ -18,12 +18,9 @@ defineProps({
 </template>
 
 <style scoped>
-.btn:hover {
-    transform: translateY(-3px);
-}
-.btn--bg {
-  padding: 1.5rem 8rem;
-  font-size: 2rem;
+.home-hero__cta {
+    margin-top: 5rem;
+    text-align: center;
 }
 .btn {
   background: #7843e9;
@@ -36,27 +33,12 @@ defineProps({
   box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
   transition: transform .3s;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+.btn:hover {
+    transform: translateY(-3px);
+}
+.btn--bg {
+  padding: 1.5rem 8rem;
+  font-size: 2rem;
 }
 
-*, ::after, ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: inherit;
-}
-.home-hero__cta {
-    margin-top: 5rem;
-    text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
 </style>

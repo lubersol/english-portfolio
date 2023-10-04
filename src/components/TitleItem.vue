@@ -36,6 +36,9 @@ defineProps({
   position: relative;
   color: #111;
 }
+.heading-sec__mb-med {
+    margin-bottom:9rem;
+}
 .heading-sec__sub {
   display: block;
   text-align: center;
@@ -45,5 +48,11 @@ defineProps({
   max-width: 80rem;
   margin: auto;
   line-height: 1.6;
+}
+
+@media only screen and (max-width:56.25em) {
+    .heading-sec__mb-med{
+        margin-bottom:8rem;
+    }
 }
 </style>
