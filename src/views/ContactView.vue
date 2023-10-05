@@ -17,15 +17,13 @@ const submitForm = async () => {
     from_email: formData.value.email,
     message: formData.value.message,
   }
-  
+
   try {
     // Envía el correo electrónico
     const response = await emailjs.send('service_3ovhdkp', 'template_86papq3', emailData)
     console.log('Correo electrónico enviado con éxito', response)
-    alert('Mensaje enviado!')
   } catch (error) {
     console.error('Error al enviar el correo electrónico', error)
-    alert('Error al enviar el mensaje')
   }
 }
 
