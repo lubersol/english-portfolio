@@ -17,19 +17,3 @@ import ProjectItem from '../components/ProjectItem.vue'
   </div>
 </template>
 
-<style>
-.sec-pad {
-    padding: 12rem 0;
-}
-.main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 92%;
-}
-@media only screen and (max-width:56.25em){
-  .sec-pad{
-      padding:8rem 0;
-  }
-}
-
-</style>

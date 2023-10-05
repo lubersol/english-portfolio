@@ -42,26 +42,4 @@ import SkillItem from '../components/SkillItem.vue'
   </div>
 </template>
 
-<style>
-.about {
-  background: #fafafa;
-}
-.sec-pad {
-  padding:12rem 0;
-}
-.main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 92%;
-}
 
-
-@media only screen and (max-width: 56.25em) {
-  .sec-pad {
-    padding: 8rem 0;
-  }
-  .heading-sec__mb-med {
-    margin-bottom: 8rem;
-  }
-}
-</style>

@@ -24,35 +24,3 @@ defineProps({
   </h2>
 </template>
 
-<style scoped>
-.heading-sec__main {
-  display: block;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-bottom: 3.5rem;
-  position: relative;
-  color: #111;
-}
-.heading-sec__mb-med {
-    margin-bottom:9rem;
-}
-.heading-sec__sub {
-  display: block;
-  text-align: center;
-  color: #555;
-  font-size: 2rem;
-  font-weight: 500;
-  max-width: 80rem;
-  margin: auto;
-  line-height: 1.6;
-}
-
-@media only screen and (max-width:56.25em) {
-    .heading-sec__mb-med{
-        margin-bottom:8rem;
-    }
-}
-</style>
