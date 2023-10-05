@@ -2,6 +2,13 @@
 import { RouterLink } from 'vue-router'
 import { computed, ref  } from 'vue'
 
+const links = [
+  { text: 'Home', to: '/' },
+  { text: 'About', to: '/about' },
+  { text: 'Projects', to: '/projects' },
+  { text: 'Contact', to: '/contact' },
+]
+
 const showDropdown = ref(false)
 
 const toggleDropdown = () => {
@@ -17,52 +24,27 @@ const iconClass = computed(() => {
   <!-- Horizontal navigation -->
   <div class="header__main">
     <ul class="header__links">
-      <li class="header__link-wrapper">
-        <RouterLink to="/" class="header__link">Home</RouterLink>
-      </li>
-      <li class="header__link-wrapper">
-        <RouterLink to="/about" class="header__link">About</RouterLink>
-      </li>
-      <li class="header__link-wrapper">
-        <RouterLink to="/projects" class="header__link">Projects</RouterLink>
-      </li>
-      <li class="header__link-wrapper">
-        <RouterLink to="/contact" class="header__link">Contact</RouterLink>
+      <li v-for="(link, index) in links" :key="index" class="header__link-wrapper">
+        <RouterLink :to="link.to" class="header__link">{{ link.text }}</RouterLink>
       </li>
     </ul>
     <div class="header__main-ham-menu-cont" @click="toggleDropdown">
       <i :class="iconClass" class="header__main-ham-menu"></i>
     </div>  
   </div>
-    <!-- Dropdown menu -->
-    <div v-if="showDropdown" class="header__sm-menu header__sm-menu--active">
-      <div class="header__sm-menu-content">
-        <ul class="header__sm-menu-links">
-          <li class="header__sm-menu-link">
-            <RouterLink to="/" @click="toggleDropdown">Home</RouterLink>
-          </li>
-          <li class="header__sm-menu-link">
-            <RouterLink to="/about" @click="toggleDropdown">About</RouterLink>
-          </li>
-          <li class="header__sm-menu-link">
-            <RouterLink to="/projects" @click="toggleDropdown">Projects</RouterLink>
-          </li>
-          <li class="header__sm-menu-link"> 
-            <RouterLink to="/contact" @click="toggleDropdown">Contact</RouterLink>
-          </li>
-        </ul>
-      </div>
+  <!-- Dropdown menu -->
+  <div v-if="showDropdown" class="header__sm-menu header__sm-menu--active">
+    <div class="header__sm-menu-content">
+      <ul class="header__sm-menu-links">
+        <li v-for="(link, index) in links" :key="index" class="header__sm-menu-link">
+          <RouterLink :to="link.to" @click="toggleDropdown">{{ link.text }}</RouterLink>
+        </li>
+      </ul>
     </div>
-  
+  </div>
 </template>
 
 <style>
-/* ul a.router-link-exact-active {
-  color: #7843e9;
-}
-ul a.header__link:hover {
-  color: #7843e9;
-} */
 .header__links {
   display: flex;
 }
@@ -75,6 +57,12 @@ ul a.header__link:hover {
   letter-spacing: 1px;
   font-weight: 700;
   transition: color .3s;
+}
+ul a.router-link-exact-active {
+  color: #7843e9;
+}
+ul a.header__link:hover {
+  color: #7843e9;
 }
 .header__main-ham-menu {
   width: 100%;
@@ -122,18 +110,18 @@ ul a.header__link:hover {
 .header__sm-menu-link a:hover {
   color:#7843e9;
 }
-.header__sm-menu-link:first-child a{
+.header__sm-menu-link:first-child a {
   border-top:1px solid #eee;
 }
-.header__sm-menu-link-last{
+.header__sm-menu-link-last {
   border-bottom:0;
 }  
-@media only screen and (max-width:37.5em){
+@media only screen and (max-width:37.5em) {
   .header__links {
     display:none;
   }
   .header__main-ham-menu-cont {
-      display:block;
+    display:block;
   }
   .header__sm-menu--active {
     visibility: visible;
@@ -142,8 +130,8 @@ ul a.header__link:hover {
 }
 @media only screen and (max-width:56.25em) {
   .header__link{
-      padding:3rem 1.8rem;
-      font-size:1.5rem;
+    padding:3rem 1.8rem;
+    font-size:1.5rem;
   }
 } 
 

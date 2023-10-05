@@ -2,26 +2,6 @@
 import ButtonItem from '@/components/ButtonItem.vue'
 import SocialMediaItem from '@/components/SocialMediaItem.vue'
 
-const icons = [
-  {
-    id: 1,
-    name: 'fab fa-linkedin',
-    link: 'https://www.linkedin.com/in/luc%C3%ADa-bermejo/',
-    text: 'Linkedin Lucia Bermejo'
-  },
-  {
-    id: 2,
-    name: 'fab fa-github',
-    link: 'https://github.com/lubersol',
-    text: 'Github Lubersol'
-  },
-  {
-    id: 3,
-    name: 'fa-solid fa-file',
-    link: 'https://drive.google.com/file/d/1kBPe6RL3Vn-fe6zkrT69YsUX1lyXZwZV/view?usp=sharing',
-    text: 'CV Lucia Bermejo'
-  }
-]
 </script>
 
 <template>
@@ -38,7 +18,7 @@ const icons = [
       <ButtonItem text="Projects" href="/projects" />
     </div>  
   </div>
-  <SocialMediaItem :icons="icons" />
+  <SocialMediaItem />
 </template>
 
 <style>

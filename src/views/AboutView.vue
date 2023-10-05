@@ -1,6 +1,8 @@
 <script setup>
 import ButtonItem from '../components/ButtonItem.vue'
 import TitleItem from '../components/TitleItem.vue'
+import SkillItem from '../components/SkillItem.vue'
+
 </script>
 
 <template>
@@ -34,30 +36,7 @@ import TitleItem from '../components/TitleItem.vue'
           </div>
           <ButtonItem text="Contact" href="/contact" />
         </div>
-        <div class="about__content-skills">
-          <h3 class="about__content-title">My Skills</h3>
-          <div class="skills">
-            <div class="skills__skill">HTML</div>
-            <div class="skills__skill">CSS</div>
-            <div class="skills__skill">JavaScript</div>
-            <div class="skills__skill">React</div>
-            <div class="skills__skill">VUE</div>
-            <div class="skills__skill">Pinia</div>
-            <div class="skills__skill">Jest</div>
-            <div class="skills__skill">GIT</div>
-            <div class="skills__skill">Github</div>
-            <div class="skills__skill">NodeJS</div>
-            <div class="skills__skill">Express</div>
-            <div class="skills__skill">PHP</div>
-            <div class="skills__skill">Laravel</div>
-            <div class="skills__skill">SQL</div>
-            <div class="skills__skill">MongoDB</div>
-            <div class="skills__skill">Terminal</div>
-            <div class="skills__skill">Responsive Design</div>
-            <div class="skills__skill">SEO</div>
-            <div class="skills__skill">SASS</div>
-          </div>
-        </div>
+        <SkillItem />
       </div>
     </div>
   </div>
@@ -75,47 +54,14 @@ import TitleItem from '../components/TitleItem.vue'
   margin: auto;
   width: 92%;
 }
-.about__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
-}
-.skills {
-  display:flex;
-  flex-wrap:wrap;
-}
-.skills__skill {
-  padding:1rem 2rem;
-  margin-bottom:1.5rem;
-  margin-right:1.5rem;
-  font-size:1.6rem;
-  background:rgba(153,153,153,.2);
-  border-radius:5px;
-  font-weight:600;
-  color:#666;
-}
-.mouse{width:25px;height:40px;border:2px solid #333;border-radius:60px;position:relative;overflow:hidden}
-.mouse::before{content:'';width:5px;height:5px;position:absolute;top:7px;left:50%;transform:translateX(-50%);background-color:#333;border-radius:50%;opacity:1;animation:wheel 1.3s infinite;-webkit-animation:wheel 1.3s infinite}
-@keyframes wheel{
-  to{
-      opacity:0;top:27px;
-  }
-}
-@-webkit-keyframes wheel{
-  to{
-      opacity:0;top:27px;
-  }
-}
+
+
 @media only screen and (max-width: 56.25em) {
   .sec-pad {
     padding: 8rem 0;
   }
   .heading-sec__mb-med {
     margin-bottom: 8rem;
-  }
-  .about__content {
-    grid-template-columns: 1fr;
-    grid-gap: 8rem;
   }
 }
 </style>
