@@ -1,2 +1,0 @@
-/* eslint-disable no-unused-vars */
-import{o as t,c as s,a as n,t as a,e as i}from"./index-a1ee9db8.js";const c={class:"heading heading-sec heading-sec__mb-med"},o={class:"heading-sec__main"},r={key:0,class:"heading-sec__sub"},m={__name:"TitleItem",props:{title:{type:String,required:!0},text:{type:String,required:!1},subtitle:{type:Boolean,default:!1}},setup(e){return(l,_)=>(t(),s("h2",c,[n("span",o,a(e.title),1),e.subtitle?(t(),s("span",r,a(e.text),1)):i("",!0)]))}};export{m as _};

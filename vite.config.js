@@ -6,10 +6,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://lubersol.github.io/vite-deploy/',
-  build: {
-    outDir: 'portfolio',
-  },
+  base: 'https://lubersol.github.io/english-portfolio/',
+  // build: {
+  //   outDir: 'portfolio',
+  // },
   plugins: [
     vue(),
     vueJsx(),
