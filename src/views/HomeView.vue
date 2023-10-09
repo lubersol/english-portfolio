@@ -1,6 +1,7 @@
 <script setup>
 import ButtonItem from '@/components/ButtonItem.vue'
 import SocialMediaItem from '@/components/SocialMediaItem.vue'
+import { BASE_URL } from 'vue-router'
 
 </script>
 
@@ -15,7 +16,7 @@ import SocialMediaItem from '@/components/SocialMediaItem.vue'
           product
         </p>
       </div>
-      <ButtonItem text="Projects" href="/projects" />
+      <ButtonItem text="Projects" :href="`${BASE_URL}projects`" />
     </div>  
   </div>
   <SocialMediaItem />
