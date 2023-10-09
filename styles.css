@@ -1,4 +1,4 @@
-*,::after,::before {
+/* *,::after,::before {
     margin:0;
     padding:0;
     box-sizing:inherit;
@@ -60,7 +60,7 @@ textarea {
     .heading-primary {
         font-size:4.5rem;
     }
-} */
+} 
 .heading-sec__mb-bg {
     margin-bottom:11rem;
 }
@@ -129,7 +129,7 @@ textarea {
 } */
 /* .heading-sec__sub--lt {
     color:#333;
-} */
+} 
 .heading-sm {
     font-size:2.2rem;
     text-transform:uppercase;
@@ -156,7 +156,7 @@ textarea {
 .btn--bg {
     padding:1.5rem 8rem;
     font-size:2rem;
-} */
+} 
 .btn--med {
     padding:1.5rem 5rem;
     font-size:1.6rem;
@@ -222,7 +222,7 @@ textarea {
     .home-hero__socials{
         display:none;
     }
-} */
+} 
 .home-hero__mouse-scroll-cont {
     position:absolute;
     bottom:3%;
@@ -243,7 +243,7 @@ textarea {
     padding:1rem;
     transition:background .3s;
     border-radius:5px;
-} */
+} 
 .home-hero__social-icon-link:hover {
     background:rgba(120,67,233,.2);
 }
@@ -384,11 +384,11 @@ textarea {
     }
 }
 .contact {
-    background:linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg);
-    background-size:cover;
-    background-position:center;
-}
-.contact__form-container {
+    background:linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url(/daac8858fd4a0ccea44f59dfd079c3c16c263f33/c157c/assets/svg/common-bg.svg); */
+    /* background-size:cover; */
+    /* background-position:center; */
+/* } */
+/* .contact__form-container {
     box-shadow:rgba(100,100,111,.2) 0 7px 29px 0;
     background:#fff;
     padding:4rem;
@@ -548,8 +548,8 @@ textarea {
 }
 .project-details__desc {
     margin:0 0 7rem 0;
-}
-.project-details__desc-para {
+} */
+/* .project-details__desc-para {
     font-size:1.8rem;
     line-height:1.7;
     color:#666;
@@ -593,7 +593,7 @@ textarea {
     .project-details__links-btn:last-child {
         margin:0;
     }
-}
+} */
 /* .header {
     position:fixed;
     width:100%;
@@ -824,4 +824,4 @@ textarea {
         to{
             opacity:0;top:27px;
         }
-} */
+} */ 
