@@ -1,6 +1,4 @@
 <script setup>
-import { BASE_URL } from 'vue-router'
-
 defineProps({
   text: {
     type: String,
@@ -15,7 +13,7 @@ defineProps({
 
 <template>
   <div class="home-hero__cta">
-    <a :href="`${BASE_URL}projects`" class="btn btn--bg">{{ text }}</a>
+    <a :href="href" class="btn btn--bg">{{ text }}</a>
   </div>
 </template>
 
