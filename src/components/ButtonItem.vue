@@ -29,7 +29,7 @@ defineProps({
 
 <template>
   <div class="home-hero__cta">
-    <RouterLink :to="href">{{ text }}</RouterLink>
+    <RouterLink :to="href" class="btn btn--bg">{{ text }}</RouterLink>
     <!-- <a href="" class="btn btn--bg">{{ text }}</a> -->
   </div>
 </template>
