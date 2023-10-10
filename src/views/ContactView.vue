@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted  } from 'vue'
+import { useRouter } from 'vue-router'
 import emailjs from '@emailjs/browser'
 
 const formData = ref({
@@ -7,8 +8,17 @@ const formData = ref({
   email: '',
   message: '',
 })
+
+const router = useRouter()
+
+const formRef = ref(null)
+onMounted(() => {
+  // Asigna el formulario al ref después de que el DOM esté listo
+  formRef.value = document.getElementById('contactForm')
+})
+
 const submitForm = async () => {
-  // Datos que envío al servicio de EmailJS
+  // Datos que se enviarán al servicio de EmailJS
   const emailData = {
     to_email: 'lubersol@gmail.com', 
     from_name: formData.value.name,
@@ -17,16 +27,16 @@ const submitForm = async () => {
   }
 
   try {
-    // Envía el correo electrónico
-    const response = await emailjs.sendForm('service_3ovhdkp', 'template_86papq3', emailData, 'fp1-h6OfHUM6IO3PR')
+    // Utiliza el ref formRef.value como el tercer parámetro en sendForm
+    const response = await emailjs.sendForm('service_3ovhdkp', 'template_86papq3', formRef.value, 'fp1-h6OfHUM6IO3PR')
     console.log('Correo electrónico enviado con éxito', response)
+    console.log(emailData)
+
+    // Navegar a la vista 'home' después de enviar el formulario
+    router.push({ name: 'home' }) 
   } catch (error) {
     console.error('Error al enviar el correo electrónico', error)
   }
-}
-
-const toHome = () => {
-  window.$nuxt.$router.push('/')
 }
 </script>
 
@@ -41,7 +51,7 @@ const toHome = () => {
         </span>
       </h2>
       <div class="contact__form-container">
-        <form id="contactForm" @submit.prevent="submitForm" class="contact__form">
+        <form ref="form" id="contactForm" @submit.prevent="submitForm" class="contact__form">
           <input type="hidden" name="form-name" value="form 1">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
@@ -55,7 +65,7 @@ const toHome = () => {
             <label class="contact__form-label" for="message">Message</label>
             <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message" v-model="formData.message"></textarea>
           </div>
-          <button type="submit" class="btn btn--theme contact__btn" @click="toHome">
+          <button type="submit" class="btn btn--theme contact__btn">
             Submit
           </button>
         </form>
