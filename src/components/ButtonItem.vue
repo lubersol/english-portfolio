@@ -1,18 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 
-// import { defineProps } from 'vue'
-// const { text, href } = defineProps(['text', 'href'])
-// import { defineProps, computed } from 'vue'
-
-// const { text, href } = defineProps(['text', 'href'])
-
-// const absoluteHref = computed(() => {
-//   // Utiliza import.meta.env.BASE_URL para obtener la ruta base
-//   const BASE_URL = import.meta.env.BASE_URL
-//   return `${BASE_URL}${href}`
-// })
-
 defineProps({
   text: {
     type: String,
@@ -25,12 +13,9 @@ defineProps({
 })
 </script>
 
-
-
 <template>
   <div class="home-hero__cta">
     <RouterLink :to="href" class="btn btn--bg">{{ text }}</RouterLink>
-    <!-- <a href="" class="btn btn--bg">{{ text }}</a> -->
   </div>
 </template>
 

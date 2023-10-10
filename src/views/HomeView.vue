@@ -1,5 +1,4 @@
 <script setup>
-// import { BASE_URL } from 'vue-router'
 import ButtonItem from '@/components/ButtonItem.vue'
 import SocialMediaItem from '@/components/SocialMediaItem.vue'
 

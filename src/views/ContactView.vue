@@ -1,31 +1,31 @@
 <script setup>
 import { ref } from 'vue'
-// import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 
 const formData = ref({
   name: '',
   email: '',
   message: '',
 })
-// const submitForm = async () => {
+const submitForm = async () => {
   // Configuración cuenta de EmailJS
-  // emailjs.init('fp1-h6OfHUM6IO3PR')
+  emailjs.init('fp1-h6OfHUM6IO3PR')
   // Datos que envío al servicio de EmailJS
-  // const emailData = {
-  //   to_email: 'lubersol@gmail.com', 
-  //   from_name: formData.value.name,
-  //   from_email: formData.value.email,
-  //   message: formData.value.message,
-  // }
+  const emailData = {
+    to_email: 'lubersol@gmail.com', 
+    from_name: formData.value.name,
+    from_email: formData.value.email,
+    message: formData.value.message,
+  }
 
-  // try {
+  try {
     // Envía el correo electrónico
-    // const response = await emailjs.send('service_3ovhdkp', 'template_86papq3', emailData)
-    // console.log('Correo electrónico enviado con éxito', response)
-//   } catch (error) {
-//     console.error('Error al enviar el correo electrónico', error)
-//   }
-// }
+    const response = await emailjs.send('service_3ovhdkp', 'template_86papq3', emailData)
+    console.log('Correo electrónico enviado con éxito', response)
+  } catch (error) {
+    console.error('Error al enviar el correo electrónico', error)
+  }
+}
 
 </script>
 
