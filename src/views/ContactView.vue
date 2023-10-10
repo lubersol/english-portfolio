@@ -8,8 +8,6 @@ const formData = ref({
   message: '',
 })
 const submitForm = async () => {
-  // Configuración cuenta de EmailJS
-  // emailjs.init('fp1-h6OfHUM6IO3PR')
   // Datos que envío al servicio de EmailJS
   const emailData = {
     to_email: 'lubersol@gmail.com', 
@@ -27,6 +25,9 @@ const submitForm = async () => {
   }
 }
 
+const toHome = () => {
+  window.$nuxt.$router.push('/')
+}
 </script>
 
 <template>
@@ -54,7 +55,7 @@ const submitForm = async () => {
             <label class="contact__form-label" for="message">Message</label>
             <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message" v-model="formData.message"></textarea>
           </div>
-          <button type="submit" class="btn btn--theme contact__btn">
+          <button type="submit" class="btn btn--theme contact__btn" @click="toHome">
             Submit
           </button>
         </form>
