@@ -1,6 +1,8 @@
 <script setup>
-import { defineProps } from 'vue'
-const { text, href } = defineProps(['text', 'href'])
+import { RouterLink } from 'vue-router'
+
+// import { defineProps } from 'vue'
+// const { text, href } = defineProps(['text', 'href'])
 // import { defineProps, computed } from 'vue'
 
 // const { text, href } = defineProps(['text', 'href'])
@@ -11,23 +13,24 @@ const { text, href } = defineProps(['text', 'href'])
 //   return `${BASE_URL}${href}`
 // })
 
-// defineProps({
-//   text: {
-//     type: String,
-//     required: true
-//   },
-  // href: {
-  //   type: String,
-  //   required: true
-  // },
-// })
+defineProps({
+  text: {
+    type: String,
+    required: true
+  },
+  href: {
+    type: String,
+    required: true
+  },
+})
 </script>
 
 
 
 <template>
   <div class="home-hero__cta">
-    <a :href="`${import.meta.env.BASE_URL}${href}`" class="btn btn--bg">{{ text }}</a>
+    <RouterLink :to="href">{{ text }}</RouterLink>
+    <!-- <a href="" class="btn btn--bg">{{ text }}</a> -->
   </div>
 </template>
 
