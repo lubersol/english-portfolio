@@ -2,29 +2,39 @@
 import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 
-const formData = ref({
-  name: '',
-  email: '',
-  message: '',
-})
-const submitForm = async () => {
+const formRef = ref(null)
+// const formData = ref({
+//   name: '',
+//   email: '',
+//   message: '',
+// })
+const sendEmail = () => {
+  if (formRef.value) {
   // Configuración cuenta de EmailJS
-  emailjs.init('fp1-h6OfHUM6IO3PR')
+  // emailjs.init('fp1-h6OfHUM6IO3PR')
   // Datos que envío al servicio de EmailJS
-  const emailData = {
-    to_email: 'lubersol@gmail.com', 
-    from_name: formData.value.name,
-    from_email: formData.value.email,
-    message: formData.value.message,
-  }
+  // const emailData = {
+  //   to_email: 'lubersol@gmail.com', 
+  //   from_name: formData.value.name,
+  //   from_email: formData.value.email,
+  //   message: formData.value.message,
+  // }
 
-  try {
-    // Envía el correo electrónico
-    const response = await emailjs.send('service_3ovhdkp', 'template_86papq3', emailData)
-    console.log('Correo electrónico enviado con éxito', response)
-  } catch (error) {
-    console.error('Error al enviar el correo electrónico', error)
-  }
+    emailjs.sendForm('service_3ovhdkp', 'template_86papq3', formRef.value, 'fp1-h6OfHUM6IO3PR')
+      .then((result) => {
+        console.log('SUCCESS!', result.text);
+      })
+      .catch((error) => {
+        console.log('FAILED...', error.text);
+      })
+    }
+  // try {
+  //   // Envía el correo electrónico
+  //   const response = await emailjs.send('service_3ovhdkp', 'template_86papq3', emailData)
+  //   console.log('Correo electrónico enviado con éxito', response)
+  // } catch (error) {
+  //   console.error('Error al enviar el correo electrónico', error)
+  // }
 }
 
 </script>
@@ -40,7 +50,7 @@ const submitForm = async () => {
         </span>
       </h2>
       <div class="contact__form-container">
-        <form id="contactForm" @submit="submitForm" class="contact__form">
+        <form ref="form" @submit.prevent="sendEmail" class="contact__form">
           <input type="hidden" name="form-name" value="form 1">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
