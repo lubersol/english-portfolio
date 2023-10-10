@@ -41,7 +41,7 @@ const toHome = () => {
         </span>
       </h2>
       <div class="contact__form-container">
-        <form ref="formData" id="contactForm" @submit.prevent="submitForm" class="contact__form">
+        <form id="contactForm" @submit.prevent="submitForm" class="contact__form">
           <input type="hidden" name="form-name" value="form 1">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
