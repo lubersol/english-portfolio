@@ -50,7 +50,7 @@ const sendEmail = () => {
         </span>
       </h2>
       <div class="contact__form-container">
-        <form ref="form" @submit.prevent="sendEmail" class="contact__form">
+        <form ref="form" id="contactForm" @submit.prevent="sendEmail" class="contact__form">
           <input type="hidden" name="form-name" value="form 1">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
@@ -64,9 +64,7 @@ const sendEmail = () => {
             <label class="contact__form-label" for="message">Message</label>
             <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message" v-model="formData.message"></textarea>
           </div>
-          <button type="submit" class="btn btn--theme contact__btn">
-            Submit
-          </button>
+          <input type="submit" value="Submit" class="btn btn--theme contact__btn" />
         </form>
       </div>
     </div>
